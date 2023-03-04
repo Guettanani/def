@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Login</h1>
+<h3>{{error}}</h3>
+<form method="POST">
+    {% csrf_token %}
+<input type="text" name = "username" id = "username" placeholder="username">
+<br><br>
+<input type="password"  name = "password" id = "password" placeholder="password">
+<button type="submit">Login</button>
+<h4>Vous n'avez pas de compte? cliquer ici <a href = "register" target="_blank" rel="noopener noreferrer">Register</a> </h4>
+</form>
+{% endblock %}
